@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #fee648;
+    transition: 0.75s;
+}
+
+
+section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+section .container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+section .container .user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+section .container .user .imgBx {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: 0.5s;
+    background: #ff0;
+}
+
+section .container .user .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section .container .user .formBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    transition: 0.5s;
+}
+
+section .container .user .formBx form h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #555;
+    font-size: 18px;
+    letter-spacing: 2px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+section .container .user .formBx form input {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: #f5f5f5;
+    border: none;
+    outline: none;
+    color: #333;
+    box-shadow: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin: 8px 0;
+    font-weight: 300;
+}
+
+section .container .user .formBx form input[type="submit"]{
+    letter-spacing: 1px;
+    max-width: 100px;
+    background: #677eff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.5s;
+}
+
+section .container .user .formBx form .signup{
+    position: relative;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+section .container .user .formBx form .signup a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #677eff;
+}
+
+  .signupBx{
+    pointer-events: none;
+}
+ .active .signupBx{
+    pointer-events: initial;
+}
+ .signupBx .formBx{
+    left: 100%;
+}
+ .active .signupBx .formBx{
+    left: 0;
+}
+ .signupBx .imgBx{
+    left: -100%;
+}
+.active .signupBx .imgBx{
+    left: 0;
+}
+
+ .signinBx .formBx{
+    left: 0; 
+} 
+ .active .signinBx .formBx{
+    left: 100%;
+} 
+ .signinBx .imgBx{
+    left: 0;
+} 
+ .active .signinBx .imgBx{
+    left: -100%;
+}
+
+
+
+@media (max-width: 900px){
+    section .container{
+        max-width: 400px;
+    }
+    section .container .imgBx{
+        display: none;
+    }
+    section .container .user .formBx{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+

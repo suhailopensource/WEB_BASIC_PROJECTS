@@ -1,0 +1,35 @@
+#navbar{
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home{
+    padding: 3px 0px;
+}
+.wrapper{
+flex-wrap: wrap;
+
+
+}
+#home h1{
+    font-size: 23px;
+    padding: 3px;
+}
+#home  p{
+    font-size: 17px;
+}
+#logo img{
+    height: 60px;
+    margin: 5px 10px;
+}
+.client-item{
+padding: 0px 0px;
+}
+#clients{
+    flex-wrap: wrap;
+}
+#clients img {
+    height: 85px;
+}

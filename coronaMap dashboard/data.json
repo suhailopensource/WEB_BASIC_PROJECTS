@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "id": "hguogyg",
+            "infected": 1310,
+            "recovered": 58,
+            "latitude": 41.066666,
+            "longitude": 14.333333,
+            "name": "Campania",
+            "country": "IT",
+            "lastUpdated": "2020-03-27T08:16:02.0372",
+            "dead": 83,
+            "sick": 1169
+        }
+    ]
+}

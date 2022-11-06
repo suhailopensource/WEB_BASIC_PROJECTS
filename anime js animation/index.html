@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="container"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" referrerpolicy="no-referrer"></script>
+        <script>
+            let container = document.querySelector('.container');
+            for(let i =0; i<100;i++){
+                let dot = document.createElement('div');
+                dot.classList.add('element');
+                container.appendChild(dot);
+            }
+            let dotAll = document.querySelectorAll('.element');
+            let animation = anime.timeline({
+                targets: dotAll,
+                easing: 'easeInOutExpo',
+                loop:true,
+                delay: anime.stagger(100,{grid:[10,10],from: 'center'})
+            })
+            animation
+            .add({
+                rotateZ:180,
+                translateY: anime.stagger(-20,{grid:[10,10],from: 'center',axis: 'y'}),
+                translateX: anime.stagger(-20,{grid:[10,10],from: 'center',axis: 'x'}),
+                opacity:1,
+            })
+            .add({
+                borderRadius:50,
+            })
+            .add({
+                scale: 0.2,
+                opacity:1,
+            })
+            animation
+            .add({
+                rotateZ:180,
+                translateY: anime.stagger(0,{grid:[10,10],from: 'center',axis: 'y'}),
+                translateX: anime.stagger(0,{grid:[10,10],from: 'center',axis: 'x'}),
+                opacity:1,
+            })
+            .add({
+                scale: 1,
+               borderRadius: 0,
+            })
+            .add({
+                rotateZ: -90,
+            })
+        </script>
+</body>
+</html>

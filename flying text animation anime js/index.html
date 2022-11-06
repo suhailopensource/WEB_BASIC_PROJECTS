@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eum aliquid doloremque voluptate suscipit rem vitae voluptatum quibusdam assumenda quis, facere animi repellendus deleniti modi obcaecati quas consequatur id architecto aliquam quod nulla illo harum. Ipsum consectetur autem optio. Cumque delectus quidem doloremque sequi in ipsam incidunt laboriosam amet necessitatibus, sunt vero eos iure totam architecto quod ab nisi quasi? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias impedit laboriosam aliquam! Maiores neque at magnam incidunt nam quis nisi, nobis atque, itaque aperiam esse sint reiciendis harum est facilis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis hic dolorum, voluptatem quos fugit at eveniet alias velit minima consequatur soluta ut magni officiis! Dignissimos veritatis consectetur quam sapiente ipsam.
+        </p>
+    </section>
+    <script src="anime.min.js"></script>
+    <script>
+        const text = document.querySelector('.text');
+        text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
+
+        const animation = anime.timeline({
+            targets:'.text span',
+            easing:'easeInOutExpo',
+            loop:true,
+        })
+
+        animation
+        .add({
+            rotate: function(){
+                return anime.random(-360,360)
+            },
+            translateX: function(){
+                return anime.random(-500,500)
+            },
+            translateY: function(){
+                return anime.random(-500,500)
+            },
+            duration: 5000,
+            delay: anime.stagger(20),
+        })
+
+        .add({
+            rotate: 0,
+            translateX: 0,
+            translateY: 0,
+            duration: 5000,
+            delay: anime.stagger(20),
+        })
+
+        window.onload = function() {
+            animation.play();
+        }
+
+    </script>
+</body>
+</html>

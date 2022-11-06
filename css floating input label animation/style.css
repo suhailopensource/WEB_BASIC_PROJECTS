@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background: #1d2b3a;
+}
+
+.inputBox{
+    position: relative;
+    width: 290px;
+}
+
+.inputBox input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background:#1d2b3a ;
+    border-radius: 5px;
+    outline: none;  
+    color: #fff;
+    font-size: 2em;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 14px;
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 1.5em;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: aquamarine;
+    transform: translateX(10px) translateY(-7px);
+    padding: 0 10px;
+    font-size: 1em;
+    background:#1d2b3a;
+    border-left:1px solid aquamarine;
+    border-right:1px solid aquamarine;
+   letter-spacing: 0.2em;
+}
+
+.inputBox input:valid ,
+.inputBox input:focus{
+    border: 1px solid aquamarine;
+}
+
+.inputBox:nth-child(2) input:valid ~ span,
+.inputBox:nth-child(2) input:focus ~ span
+{
+    background: aquamarine;
+    color: #1d2b3a;
+}
+

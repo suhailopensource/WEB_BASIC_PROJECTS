@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #navbar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #navbar ul{
+            display: flex;
+            list-style: none;
+            margin: 20px;
+        }
+        #navbar ul li{
+            margin: 20px;
+        }
+        #navbar ul li a{
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        /* #navbar::before{
+            content: "";
+            background-color: black;
+            opacity: 0.7;
+            z-index: -1;
+            height: 100vh;
+            width: 100vw;
+        } */
+        #home{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #home::before{
+            content: "";
+            background-image: url(bg1.jpg) ;
+            height: 50vh;
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            
+        }
+        #logo img{
+            height: 90px;
+        }
+
+       
+    </style>
+
+
+</head>
+<body>
+    <div id="navbar">
+        <div id="logo">
+            <img src="sumipig.jpeg" alt="MyOnlineMeals.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">Our Clients</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="home">
+        <h1 class="h-primary">WELCOME TO SWIGGYpiggy</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quasi itaque sapiente. Voluptatibus
+            quam illo repellendu</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quasi itaque sapiente. Voluptatibus
+            quam illo repellendu</p>
+        <button class="btn1">
+            ORDER NOW
+        </button>
+    </section>
+    <hr>
+</body>
+</html>

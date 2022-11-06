@@ -1,0 +1,4 @@
+<i class="fa-light fa-circle-check"></i>
+<i class="fa-solid fa-xmark"></i>
+<i class="fa-light fa-circle-check"></i>
+<i class="fa-solid fa-circle-check"></i>

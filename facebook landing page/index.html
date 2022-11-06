@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook | RESPONSIVE landing page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+        <header>
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <ul>
+                <li><a href="#" class="active">home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+            <a href="#" class="app"><ion-icon name="arrow-down-outline"></ion-icon> Download App</a>
+        </header>
+        <div class="contentbx">
+            <div class="text">
+                <h2>Facebook</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error tenetur inventore non quaerat consectetur! Voluptatibus possimus magnam eveniet tempore quibusdam quam at laboriosam quasi placeat, quod consequuntur porro aspernatur sint, saepe.</p>
+                <h4>Download the app</h4>
+                <a href="#" class="btn"><ion-icon name="logo-apple"></ion-icon> Apple Store</a>
+                <a href="#" class="btn"><ion-icon name="logo-google-playstore"></ion-icon> Play Store</a>
+            </div>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="imgbx">
+                <img src="images/fb1.png" class="slides active">
+                <img src="images/fb2.png" class="slides">
+                <img src="images/fb3.png" class="slides">
+                <img src="images/fb4.png" class="slides">
+                <img src="images/fb5.png" class="slides">
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+    </section>
+    <script>
+        const slides = document.querySelectorAll('.slides');
+        const dots = document.querySelectorAll('.dot');
+
+        function setActive(i){
+            for(slide of slides){
+                slide.classList.remove('active');
+                slides[i].classList.add('active');
+            }
+            for(dot of dots){
+                dot.classList.remove('active');
+                dots[i].classList.add('active');
+            }
+        }
+
+            for(let j = 0; j<dots.length;j++){
+                dots[j].addEventListener("click", function(){
+                    setActive(j);
+                })
+            }
+        
+    </script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

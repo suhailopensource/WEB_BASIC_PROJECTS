@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="https://www.starbucks.in/"><img src="logo.png" class="logo" alt=""></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2>It's not just Coffee<br>It's <span>Sumibucks</span></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et nemo quis nisi veniam unde quod maxime
+                    esse expedita consequatur, odit fugit quos adipisci corporis, similique cum quae. Omnis,
+                    exercitationem totam.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgbox">
+                <img src="img1.png" class="starbucks" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png'); circleColor('#017143')" alt=""></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png'); circleColor('#eb7495')"alt=""></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png'); circleColor('#d752b1')"alt=""></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+           let starbuck =  document.querySelector('.starbucks')
+            starbuck.src = anything;
+            
+        }
+        function circleColor(color){
+           let circle =  document.querySelector('.circle');
+           circle.style.background = color;
+        }
+    </script>
+</body>
+
+</html>

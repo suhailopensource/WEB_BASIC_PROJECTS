@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(140, 140, 241);
+}
+
+/* .container{
+    position: relative;
+    height: 500px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.vapour{
+    position: relative;
+    display: flex;   
+}
+
+.vapour span{
+    position: relative;
+    bottom: -320px;
+    display: block;
+    height: 120px;
+    min-width: 12px;
+    background-color: #fff;
+    margin: 0 2px 50px;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    filter: blur(10px);
+    animation-delay: calc(var(--i)* -0.5s);
+}
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translateY(0) scaleX(1);
+    }
+    15%{
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(-500px) scaleX(5);
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-1000px) scaleX(10);
+        display: none;
+    }
+}

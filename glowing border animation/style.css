@@ -1,0 +1,53 @@
+*{
+    border: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(43, 43, 43);
+}
+
+.box{
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    background: conic-gradient(red, green,indigo,yellow,violet,blue,purple);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box::after{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: 'HELLO';
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    color: #fff;
+    height: 240px;
+    width: 240px;
+    background-color: rgb(43, 43, 43);
+}

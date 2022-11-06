@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #red{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        }
+        #green{
+        height: 100px;
+        width: 100px;
+        background-color: green ;
+        }
+        #yellow{
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        }
+        </style>
+</head>
+<body>
+    <div style="display: flex;">
+        <button id ="red" class="colorbtn" value="red"></button>
+        <button id= "green" class="colorbtn" value="green" ></button>
+        <button id="yellow" class="colorbtn" value="yellow"></button>
+    </div>
+    <button id="clear"> CLEAR GAME </button>
+        <script>
+            let redDiv= document.getElementById('red')
+let greenDiv= document.getElementById('green')
+let yellowDiv= document.getElementById('yellow')
+
+const squares = document.querySelectorAll('.colorbtn')
+
+
+let timesClicked = {red: 0,green: 0, yellow: 0}
+
+squares.forEach(square => {
+    square.onclick = () => {
+        timesClicked[square.value]+=1
+        square.innerText =  timesClicked[square.value]
+    }
+}
+);
+
+function clearGame(){
+timesClicked.red = 0
+timesClicked.green = 0
+timesClicked.yellow = 0
+squares.forEach(square=> square.innerText="")
+}
+
+const clearGameDiv  = document.getElementById("clear")
+clearGameDiv.onclick = () => clearGame()
+        </script>   
+    </body>
+</html>

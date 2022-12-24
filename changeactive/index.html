@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+          <ul>
+            <li class="home active"><a href="#home">Home</a></li>
+            <li class="about"><a href="#about">About</a></li>
+            <li class="contact"><a href="#contact">Contact</a></li>
+            <li class="footer"><a href="#footer">Footer</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section id="home">
+        <h1>Home</h1>
+      </section>
+      <section id="about">
+        <h1>About</h1>
+      </section>
+      <section id="contact">
+        <h1>Contact</h1>
+      </section>
+      <section id="footer">
+        <h1>Footer</h1>
+      </section>
+      <script>const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll("nav .container ul li");
+        window.addEventListener("scroll", () => {
+          let current = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+              current = section.getAttribute("id");
+            }
+          });
+        
+          navLi.forEach((li) => {
+            li.classList.remove("active");
+            if (li.classList.contains(current)) {
+              li.classList.add("active");
+            }
+          });
+        });
+        </script>
+</body>
+</html>

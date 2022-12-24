@@ -1,0 +1,37 @@
+{
+  "name": "pdf-merger-js",
+  "version": "3.3.0",
+  "description": "merge multible PDF documents, or parts of them, to a new PDF document",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "browser": "./browser.js",
+  "scripts": {
+    "standard": "standard",
+    "standard:fix": "standard --fix",
+    "test": "jest --detectOpenHandles",
+    "test:watch": "jest --watch --forceExit --detectOpenHandles"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "repository": "github:nbesli/pdf-merger-js",
+  "keywords": [
+    "pdf",
+    "merge"
+  ],
+  "author": "nbesli",
+  "license": "MIT",
+  "dependencies": {
+    "pdfjs": "^2.4.7"
+  },
+  "devDependencies": {
+    "fs-extra": "^10.0.0",
+    "jest": "^27.4.7",
+    "jsdom": "^19.0.0",
+    "node-fetch": "^3.1.1",
+    "pdf-diff": "^0.1.1",
+    "standard": "^16.0.4"
+  }
+}
